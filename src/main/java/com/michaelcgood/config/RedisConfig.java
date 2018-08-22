@@ -23,8 +23,8 @@ public class RedisConfig {
 	String host;
 	@Value("${spring.redis.port}")
 	int port;
-	@Value("${spring.redis.password}")
-	String password;
+//	@Value("${spring.redis.password}")
+//	String password;
 	
 //
     @Bean
@@ -32,7 +32,7 @@ public class RedisConfig {
 		JedisConnectionFactory jedisConFactory = new JedisConnectionFactory();
 		jedisConFactory.setHostName(host);
 		jedisConFactory.setPort(port);
-		jedisConFactory.setPassword(password);
+//		jedisConFactory.setPassword(password);
 		
 		return jedisConFactory;
     }
